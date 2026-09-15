@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Finale - Nida</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <style>
+        :root { --bg: #0a0812; --card: #141022; --accent: #d87093; --text-muted: #c7b8ea; }
+        * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
+        body { background-color: var(--bg); color: #e2d9f3; min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 20px; }
+
+        nav { width: 100%; max-width: 800px; padding: 20px 0; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 30px; }
+        nav a { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; padding: 6px 14px; border-radius: 20px; border: 1px solid rgba(199, 184, 234, 0.15); transition: 0.3s; }
+        nav a:hover, nav a.active { background: rgba(216, 112, 147, 0.2); border-color: var(--accent); color: #fff; }
+
+        .container { max-width: 700px; width: 100%; margin: auto; text-align: center; }
+
+        .letter-paper { background: var(--card); padding: 45px 35px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.06); text-align: left; box-shadow: 0 10px 30px rgba(0,0,0,0.6); margin-bottom: 35px; }
+        .letter-paper h1 { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; color: var(--accent); margin-bottom: 20px; font-weight: 500; text-align: center; }
+        .letter-paper p { font-size: 1.05rem; color: #d8ceee; line-height: 1.8; margin-bottom: 18px; }
+
+        .celebrate-btn { background: var(--accent); color: #fff; border: none; padding: 16px 36px; font-size: 1.05rem; border-radius: 35px; cursor: pointer; transition: 0.3s; box-shadow: 0 0 20px rgba(216, 112, 147, 0.4); margin-bottom: 40px; }
+        .celebrate-btn:hover { transform: scale(1.05); background: #e07a9e; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Entrance</a>
+        <a href="story.html">Our Story</a>
+        <a href="reasons.html">About You</a>
+        <a href="letter1.html">1-Month Letter</a>
+        <a href="letter2.html">Quiet Thoughts</a>
+        <a href="finale.html" class="active">Grand Finale</a>
+    </nav>
+
+    <div class="container">
+        <div class="letter-paper">
+            <h1>To Our Future Together</h1>
+            <p>Nida,</p>
+            <p>This website was created to celebrate our very first month, but it's really just a reflection of how grateful I am to have you by my side.</p>
+            <p>From being close friends to taking that step together on August 20th, every single day with you has felt genuine and special. Your smile, your eyes, your voice, and everything that makes you who you are—I cherish all of it.</p>
+            <p>Happy 1 Month Anniversary. Here is to all the months, memories, and moments yet to come.</p>
+            <p style="text-align: right; font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--accent); margin-top: 20px;">Always Yours ❤️</p>
+        </div>
+
+        <button class="celebrate-btn" onclick="popCelebration()">Spark Our Celebration ✨</button>
+    </div>
+
+    <script>
+        function popCelebration() {
+            confetti({
+                particleCount: 120,
+                spread: 70,
+                origin: { y: 0.6 },
+                colors: ['#d87093', '#c7b8ea', '#ffffff']
+            });
+        }
+    </script>
+</body>
+</html>
